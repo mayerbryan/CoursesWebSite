@@ -1,7 +1,11 @@
 namespace CoursesWebSite.ContentContext
 {
-    public class Carerr : Content
+    public class Career : Content
     {
-        public int Career { get; set; }
+        public Career(string title, string url) : base(title, url){
+            Items = new List<CareerItem>();
+        }
+        public IList<CareerItem> Items {get;set;}
+        public int TotalCourses => return Items.Count;
     }
 }
