@@ -1,8 +1,10 @@
 
 
+using CoursesWebSite.SharedContext;
+
 namespace CoursesWebSite.ContentContext
 {
-    public class Module
+    public class Module : Base
     {
 
         public Module()
