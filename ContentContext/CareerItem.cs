@@ -1,5 +1,18 @@
+using CoursesWebSite.NotificationContext;
+using CoursesWebSite.SharedContext;
+
 namespace CoursesWebSite.ContentContext
-{    public class CareerItem{
+{    public class CareerItem : Base{
+        public CareerItem(int order, string title, string description, Course course)
+        {
+            if (course == null)
+            AddNotification(new Notification("Course", "Invalid Course"));
+            Order = order;
+            Title = title;
+            Description = description;
+            Course = course;
+        }
+
         public int Order { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
